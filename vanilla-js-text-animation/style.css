@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+h1 {
+  color: transparent;
+  font-size: 4rem;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 100vh;
+}
+
+span {
+  transition: all 0.8s ease;
+  /* opacity: 0;
+  transform: translateY(50px);
+  display: inline-block; */
+}
+
+span.fade {
+  color: rgb(219, 66, 66);
+  /* opacity: 1;
+  transform: translateY(0px); */
+}

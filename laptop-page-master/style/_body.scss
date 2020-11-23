@@ -1,0 +1,73 @@
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 2.8em;
+  font-weight: 500;
+  background: linear-gradient(to right, var(--gradiente));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 1.4em;
+  color: var(--body);
+}
+
+.cta {
+  padding: 50px 0 0 0;
+}
+
+.cta-select {
+  border: 1px solid var(--btnS);
+  background: transparent;
+  color: var(--btnS);
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1em;
+  overflow: hidden;
+}
+.cta-select:hover {
+  color: var(--white);
+  background: var(--btnS);
+  font-size: 1.1em;
+}
+
+/* .cta-select:hover::after {
+  transform: translate(0);
+}
+
+.cta-select::after {
+  content: "";
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c36c66;
+  z-index: -1;
+  transform: translate(0, 100%);
+  transition: all 0.25s ease;
+} */
+
+.cta-add {
+  background: #c36cbb;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--white);
+  border: none;
+  margin: 30px 0 0 30px;
+}
