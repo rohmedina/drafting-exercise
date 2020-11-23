@@ -2,7 +2,7 @@
 
 # Link
 
-[Laptop-Page Netlify](https://app.netlify.com/sites/laptop-page/overview)
+[Laptop-Page Netlify](https://laptop-page.netlify.app/)
 
 ## Diseño
 

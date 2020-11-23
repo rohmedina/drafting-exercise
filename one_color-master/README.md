@@ -2,7 +2,7 @@
 
 # Link
 
-[One-Color Netlify](https://app.netlify.com/sites/one-color/overview)
+[One-Color Netlify](https://one-color.netlify.app/)
 
 ## Diseño
 
