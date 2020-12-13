@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: #1c1c25;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  /* bottom: -40%;
+  left: 40%; */
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgb(235, 48, 48), rgb(243, 102, 243));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 508px;
+  height: 314px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  z-index: 2;
+}
+
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: 1s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transition: 0.5s ease all;
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
+
+.card.active .face.front {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari & Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+  -ms-transform: rotateY(180deg); /* Internet Explorer */
+  -o-transform: rotateY(180deg); /* Opera */
+}
+
+.card .face.back {
+  transform: rotateY(180deg);
+}
+
+.card.active .face.back {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg); /* Safari & Chrome */
+  -moz-transform: rotateY(360deg); /* Firefox */
+  -ms-transform: rotateY(360deg); /* Internet Explorer */
+  -o-transform: rotateY(360deg); /* Opera */
+}
+
+.card .face.front .logo-marca {
+  text-align: right;
+  min-height: 50px;
+}
+
+.card .face.front .logo-marca img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 80px;
+  height: 40px;
+}
+
+/* .card .face.front::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #eea100;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.card .face.front::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  width: 60px;
+  height: 60px;
+  background: #e10d07;
+  border-radius: 50px;
+  opacity: 0.7;
+} */
+
+.card .face.front .debit {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card .face.front .bank {
+  position: absolute;
+  left: 50px;
+  top: 25px;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.card .face.front .chip {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  max-width: 64px;
+}
+
+.card .face.front .number {
+  position: absolute;
+  left: 50px;
+  bottom: 130px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 1px #0005;
+  font-family: "Orbitron", sans-serif;
+}
+
+.card .face.front .valid {
+  position: absolute;
+  left: 50px;
+  bottom: 90px;
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+  text-align: right;
+}
+
+.card .face.front .valid span:nth-child(2n) {
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.card .face.front .valid span:last-child {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.card .face.front .cardHolder {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card .face.back .blackBar {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 60px;
+  background: #000;
+}
+
+.card .face.back .ccvtext {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+}
+
+.card .face.back .ccvtext h5 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card .face.back .ccvtext .whiteBar {
+  position: relative;
+  width: 400px;
+  height: 40px;
+  background: #fff;
+  margin-top: 5px;
+}
+
+.card .face.back .ccvtext .ccv {
+  position: relative;
+  top: -35px;
+  background: #ccc;
+  color: #111;
+  width: 50px;
+  height: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 395px;
+}
+
+.card .face.back .text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+
+/* BTN */
+.container-btn .btn-open-form {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  background: #2364d2;
+  color: #fff;
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 5px 4px 8px rgba(24, 56, 182, 0.4);
+  padding: 5px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  outline: none;
+}
+
+.container-btn .btn-open-form:hover {
+  background: #1850b1;
+}
+
+.container-btn .btn-open-form.active {
+  transform: rotate(45deg);
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+  background: linear-gradient(rgb(235, 48, 48), rgb(243, 102, 243));
+  width: 100%;
+  max-width: 500px;
+  padding: 150px 30px 30px 30px;
+  border-radius: 10px;
+  position: relative;
+  top: -150px;
+  margin: auto;
+  z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.3s ease-out;
+}
+
+.formulario-tarjeta.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+  border: 2px solid #ced6e0;
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+  padding: 5px 12px;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+  border: 2px solid #93bded;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+  outline: rgb(4, 4, 4);
+  box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta input {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+  width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+  min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+  width: 100%;
+  margin-right: 15px;
+  position: relative;
+}
+
+.formulario-tarjeta select {
+  -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+  position: absolute;
+  color: #ced6e0;
+  top: 18px;
+  right: 15px;
+  transition: 0.3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+  color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  color: #fff;
+  background: #2364d2;
+  box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+  cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+  background: #1850b1;
+}

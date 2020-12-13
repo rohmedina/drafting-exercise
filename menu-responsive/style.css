@@ -193,6 +193,15 @@ body {
   color: var(--sec);
 }
 
+input {
+  color: var(--body);
+  border: none;
+  outline: none;
+}
+input::placeholder {
+  color: var(--body);
+}
+
 /* section */
 .section {
   position: absolute;
@@ -348,5 +357,14 @@ body {
   }
   .col .mega-links li {
     margin: 0;
+  }
+
+  .input {
+    padding: 0 1rem;
+    display: block;
+    font-size: 1.4rem;
+  }
+  input {
+    background: var(--body);
   }
 }

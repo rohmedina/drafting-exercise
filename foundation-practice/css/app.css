@@ -1,0 +1,41 @@
+/* .menu {
+  background: transparent;
+}
+.menu a:hover {
+  background: rgb(97, 93, 93);
+} */
+
+/* li {
+  background: #333;
+  opacity: 0, 3;
+}
+
+li:hover {
+  background: rgb(97, 93, 93);
+} */
+
+a {
+  color: #000;
+}
+a:hover {
+  color: #000;
+}
+
+.drilldown a {
+  background-color: transparent;
+}
+
+.drilldown .is-drilldown-submenu a {
+  background-color: transparent;
+}
+
+.menu {
+  background-color: transparent;
+}
+
+.fondo {
+  background-image: url("../img/tablero.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
