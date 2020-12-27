@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(175, 228, 228);
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   min-height: 100vh;
   grid-gap: 1rem;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .img-container {

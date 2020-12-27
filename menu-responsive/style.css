@@ -368,3 +368,14 @@ input::placeholder {
     background: var(--body);
   }
 }
+
+/* Resultados */
+.resultados-busqueda {
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.resultados-busqueda ul li {
+  color: #364f6b;
+  list-style: none;
+}
